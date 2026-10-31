@@ -83,6 +83,11 @@
   .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   figcaption { margin-top: 8px; color: var(--soft); font-size: 0.95rem; }
 
+  .story-card p { max-width: 34em; margin: 0 0 1.1em; line-height: 2; }
+  .story-card .sub { color: var(--soft); margin-top: -8px; }
+  .story-card .say { margin-left: 1.2em; padding-left: 1em; border-left: 4px solid var(--orange); color: var(--orange-deep); }
+  .story-card summary { cursor: pointer; color: var(--orange-deep); font-weight: 700; margin-bottom: 1.1em; }
+
   footer { padding: 40px 0 56px; color: var(--soft); text-align: center; }
 
   @media (max-width: 520px) {
@@ -102,22 +107,20 @@
     </div>
   </div>
   <h1>柚子</h1>
-  <p class="tagline">一只橘白猫，这里是她的小站</p>
+  <p class="tagline">一只橘白猫，这里是柚子的小站</p>
 </header>
 
 <main class="wrap">
   <section id="about">
     <h2>认识柚子</h2>
     <div class="card">
-      <!-- 下面的内容都是示例，请改成柚子的真实情况 -->
       <dl>
         <dt>毛色</dt><dd>橘白相间</dd>
-        <dt>生日</dt><dd>填写柚子的生日或到家的日子</dd>
-        <dt>性格</dt><dd>填写柚子的性格</dd>
-        <dt>爱好</dt><dd>填写柚子最爱做的事</dd>
-        <dt>最爱吃</dt><dd>填写柚子的最爱</dd>
+        <dt>到家日</dt><dd>2021年1月15日</dd>
+        <dt>性格</dt><dd>外向，和谁都混得熟，是交际大师</dd>
+        <dt>爱好</dt><dd>黏人</dd>
+        <dt>最爱吃</dt><dd>猫条，因为柚子没有牙</dd>
       </dl>
-      <p class="story">在这里写一小段柚子的故事，比如是怎么来到你家的，有什么让你印象深刻的小事。</p>
     </div>
   </section>
 
@@ -126,16 +129,52 @@
     <div class="gallery">
       <figure>
         <div class="photo"><span>images/youzi-1.jpg</span><img src="images/youzi-1.jpg" alt="柚子的照片 1" onerror="this.remove()"></div>
-        <figcaption>给这张照片写一句话</figcaption>
+        <figcaption>在我的床上打滚</figcaption>
       </figure>
       <figure>
         <div class="photo"><span>images/youzi-2.jpg</span><img src="images/youzi-2.jpg" alt="柚子的照片 2" onerror="this.remove()"></div>
-        <figcaption>给这张照片写一句话</figcaption>
+        <figcaption>和姐姐白糖抱团取暖</figcaption>
       </figure>
       <figure>
         <div class="photo"><span>images/youzi-3.jpg</span><img src="images/youzi-3.jpg" alt="柚子的照片 3" onerror="this.remove()"></div>
-        <figcaption>给这张照片写一句话</figcaption>
+        <figcaption>和我在客厅腻歪</figcaption>
       </figure>
+    </div>
+  </section>
+
+  <section id="story">
+    <h2>阳台上的柚子</h2>
+    <div class="card story-card">
+      <p class="sub">一个关于陪伴、阳光与温柔的小故事</p>
+      <p>午后的阳光，透过阳台的玻璃窗，斜斜地洒进家里。</p>
+      <p>我刚刚忙完手头的事情，拿着一杯茶，走到阳台上，准备享受片刻的宁静。</p>
+      <p>没想到，柚子早已经在那里等着我了。</p>
+      <p>柚子是一只漂亮的橘白猫，身上穿着一件天然的白色绒衣，头顶和耳朵旁点缀着几抹橘黄色，像是阳光不小心落在了它的身上。它有一双半眯着的眼睛，平时总是一副若无其事的样子，好像家里所有事情都与它无关。</p>
+      <p>可我知道，它其实一直在默默关注着我。</p>
+      <details>
+        <summary>继续读下去</summary>
+        <p>我坐在阳台的小椅子上，柚子慢悠悠地走过来，先是看看我，又看看窗外。它轻轻跳上旁边的椅子，找了一个舒服的位置坐下来。</p>
+        <p class="say">「柚子，今天外面的风景怎么样？」</p>
+        <p>它没有回答，只是转过头，眯着眼睛看了我一眼，仿佛在说：</p>
+        <p class="say">「你每天都这么忙，难得有时间陪我，不如先坐下来，好好看看这个世界。」</p>
+        <p>阳台外，树叶在微风中轻轻摇晃，远处传来几声鸟鸣。楼下有人经过，偶尔有汽车驶过。阳光照在柚子的身上，把它的白色毛发映得暖洋洋的。</p>
+        <p>我伸出手，轻轻摸了摸它的脑袋。</p>
+        <p>柚子没有躲开，反而把脑袋往我的手心里靠了靠。</p>
+        <p>那一刻，我忽然觉得，生活其实不需要太多复杂的东西。</p>
+        <p>一杯茶、一片阳光、一方小小的阳台，还有一只愿意陪伴自己的猫，就已经足够美好了。</p>
+        <p>过了一会儿，柚子似乎有些困了。它蜷起身体，把脑袋靠在前爪上，慢慢闭上眼睛。</p>
+        <p>我看着它，轻声说：</p>
+        <p class="say">「柚子，你知道吗？这个家因为有了你，多了许多快乐。」</p>
+        <p>它依旧没有回答，只是轻轻动了动耳朵。</p>
+        <p>也许，它听见了。</p>
+        <p>也许，在它的世界里，我只是那个每天给它准备食物、陪它玩耍、偶尔打扰它睡觉的人。</p>
+        <p>但在我的世界里，它却是一个特别的家庭成员。</p>
+        <p>夕阳渐渐西下，阳台上的光线变得柔和起来。</p>
+        <p>我没有急着离开，柚子也没有急着起身。</p>
+        <p>我们就这样安静地坐着，一个看风景，一个享受午后的余温。</p>
+        <p>原来，幸福有时候并不需要远行。</p>
+        <p>它可能就藏在自家的阳台上，藏在一只叫柚子的橘白猫身边，藏在那些平凡而温暖的日子里。</p>
+      </details>
     </div>
   </section>
 </main>
