@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>柚子 · 一只橘白猫</title>
+<style>
+  :root {
+    --sky: #E6EFF3;
+    --orange: #EE8A2B;
+    --orange-deep: #B85C10;
+    --white: #FFFFFF;
+    --ink: #33261D;
+    --soft: #6E5D50;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--sky);
+    color: var(--ink);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    line-height: 1.8;
+  }
+  a { color: var(--orange-deep); }
+  :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* 首屏：带猫耳的相框 */
+  .hero { text-align: center; padding: 64px 0 40px; }
+  .frame {
+    position: relative;
+    width: min(300px, 78vw);
+    aspect-ratio: 1;
+    margin: 0 auto 36px;
+    background: var(--orange);
+    border-radius: 46% 46% 42% 42%;
+    border: 8px solid var(--white);
+    overflow: visible;
+  }
+  .frame::before, .frame::after {
+    content: "";
+    position: absolute;
+    top: -34px;
+    width: 30%;
+    height: 30%;
+    background: var(--orange);
+    border: 0;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  }
+  .frame::before { left: 8%; transform: rotate(-12deg); }
+  .frame::after { right: 8%; transform: rotate(12deg); }
+  .frame .inner {
+    position: absolute; inset: 0;
+    border-radius: inherit;
+    overflow: hidden;
+    display: grid; place-items: center;
+    color: var(--white); font-size: 1rem; text-align: center; padding: 20px;
+  }
+  .frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+  h1 { font-size: clamp(3.4rem, 14vw, 6rem); line-height: 1.1; margin: 0; letter-spacing: 0.12em; font-weight: 800; }
+  .tagline { margin: 12px 0 0; color: var(--soft); font-size: 1.1rem; }
+
+  section { padding: 40px 0; }
+  h2 { font-size: 1.5rem; margin: 0 0 20px; }
+
+  .card { background: var(--white); border-radius: 28px; padding: 32px; }
+  dl { margin: 0; display: grid; grid-template-columns: 5.5em 1fr; gap: 10px 16px; }
+  dt { color: var(--orange-deep); font-weight: 700; }
+  dd { margin: 0; }
+  .story { max-width: 34em; margin: 24px 0 0; }
+
+  /* 相册 */
+  .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+  .gallery figure { margin: 0; }
+  .photo {
+    position: relative; aspect-ratio: 4 / 5;
+    background: var(--white); border-radius: 22px; overflow: hidden;
+    display: grid; place-items: center; color: var(--soft); font-size: 0.95rem; text-align: center; padding: 16px;
+  }
+  .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  figcaption { margin-top: 8px; color: var(--soft); font-size: 0.95rem; }
+
+  footer { padding: 40px 0 56px; color: var(--soft); text-align: center; }
+
+  @media (max-width: 520px) {
+    .card { padding: 24px; }
+    dl { grid-template-columns: 4.5em 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <!-- 把柚子的照片命名为 images/youzi-main.jpg，放进仓库的 images 文件夹 -->
+  <div class="frame">
+    <div class="inner">
+      <span>放一张柚子的照片<br>images/youzi-main.jpg</span>
+      <img src="images/youzi-main.jpg" alt="橘白猫柚子的照片" onerror="this.remove()">
+    </div>
+  </div>
+  <h1>柚子</h1>
+  <p class="tagline">一只橘白猫，这里是她的小站</p>
+</header>
+
+<main class="wrap">
+  <section id="about">
+    <h2>认识柚子</h2>
+    <div class="card">
+      <!-- 下面的内容都是示例，请改成柚子的真实情况 -->
+      <dl>
+        <dt>毛色</dt><dd>橘白相间</dd>
+        <dt>生日</dt><dd>填写柚子的生日或到家的日子</dd>
+        <dt>性格</dt><dd>填写柚子的性格</dd>
+        <dt>爱好</dt><dd>填写柚子最爱做的事</dd>
+        <dt>最爱吃</dt><dd>填写柚子的最爱</dd>
+      </dl>
+      <p class="story">在这里写一小段柚子的故事，比如是怎么来到你家的，有什么让你印象深刻的小事。</p>
+    </div>
+  </section>
+
+  <section id="photos">
+    <h2>柚子的照片</h2>
+    <div class="gallery">
+      <figure>
+        <div class="photo"><span>images/youzi-1.jpg</span><img src="images/youzi-1.jpg" alt="柚子的照片 1" onerror="this.remove()"></div>
+        <figcaption>给这张照片写一句话</figcaption>
+      </figure>
+      <figure>
+        <div class="photo"><span>images/youzi-2.jpg</span><img src="images/youzi-2.jpg" alt="柚子的照片 2" onerror="this.remove()"></div>
+        <figcaption>给这张照片写一句话</figcaption>
+      </figure>
+      <figure>
+        <div class="photo"><span>images/youzi-3.jpg</span><img src="images/youzi-3.jpg" alt="柚子的照片 3" onerror="this.remove()"></div>
+        <figcaption>给这张照片写一句话</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>柚子的小站 · 用 GitHub Pages 发布</p>
+</footer>
+
+</body>
+</html>
